@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/bd.css">
+    <link rel="stylesheet" href="../css/visionneuse.css">
+    <!-- JAVASCRIPT -->
+    <script src="../js/navbar.js" defer></script>
+    <script src="../js/bd.js" defer></script>
+    <script src="../js/navigationsmartphone.js" defer></script>
+</head>
+
+<body data-page="bd">
+    <!-- <div class="image2fond"></div> -->
+    <header>
+        <div>
+            <h4><a href="../index.html" class="fushia accueil">MARION CHARVE</a></h4>
+        </div>
+        <div id="burgermenu">
+            <i onclick="ouvrirmenusmartphone()" class="bi bi-list"></i>
+        </div>
+        <div class="navbar"></div>
+    </header>
+    <main>
+        <div id="titre" class="fushia">
+            <h3>Bande dessinée</h3>
+        </div>
+        <div>
+            <div id="banniere">
+                <a target="_blank" href="https://klaimsden.net/jackpot/"><img src="../img/logo.jpg"></a>
+            </div>
+            <p class="light margeinferieure">
+                série complète publiée en ligne de 2012 à 2021 (lecture gratuite)
+            </p>
+        </div>
+        <h3>couvertures et ex-libris</h3>
+        <div class="grille1">
+            <div>
+                <img id="1" src="../img/beware.jpg">
+            </div>
+            <div>
+                <img id="2" src="../img/couv_01.jpg">
+            </div>
+            <div>
+                <img id="3" src="../img/couv_02.jpg">
+            </div>
+            <div>
+                <img id="4" src="../img/couv_03.jpg">
+            </div>
+            <div>
+                <img id="5" src="../img/couv_04.jpg">
+            </div>
+            <div>
+                <img id="6" src="../img/couv_05.jpg">
+            </div>
+            <div>
+                <img id="7" src="../img/couv_06.jpg">
+            </div>
+            <div>
+                <img id="8" src="../img/kiki_nanami.jpg">
+            </div>
+            <div>
+                <img id="9" src="../img/2022.jpg">
+            </div>
+        </div>
+        <div class="grille2">
+            <div>
+                <img id="10" src="../img/halloween_2013.jpg">
+            </div>
+            <div>
+                <img id="11" src="../img/halloween_2014.jpg">
+            </div>
+            <div>
+                <img id="12" src="../img/how_i_met_your_boss.jpg">
+            </div>
+            <div>
+                <img id="13" src="../img/ieufsln_sanstexte.jpg">
+            </div>
+        </div>        
+    </main>
+    <!-- VISIONNEUSE -->
+    <div id="visionneuse" class="calqueNoir">
+        <div class="contenuVisionneuse">
+            <i class="bi bi-x-lg close" onclick="fermerVisionneuse()"></i>
+            <img id="imageHD" src="">
+            <!-- flèches -->
+            <div class="fleches">
+                <a class="avant" onclick="ensuite(-1)">&#10094;</a>
+                <a class="apres" onclick="ensuite(1)">&#10095;</a>
+            </div>
+        </div>
+    </div>
+    <div id="menusmartphone"></div>
+    <footer>
+    </footer>
+</body>
+
+</html>
