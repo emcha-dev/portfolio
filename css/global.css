@@ -93,7 +93,7 @@ body {
     position: fixed;
     inset: 0;
     /*réglages opacité et position z*/
-    background-image: url("../img/cartoons.png");
+    background-image: url("https://klaimsden.net/jackpot/portfolio/img/cartoons.png");
     background-size : cover;
     background-position: bottom;
     background-attachment: fixed;
