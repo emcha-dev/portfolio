@@ -1,0 +1,97 @@
+:root {
+    --cols: 2;
+    --illus: 3;
+    --gap: 40px;
+}
+
+.grille {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100% !important;
+    justify-content: center;
+    gap: var(--gap);
+}
+
+.grille>div {
+    flex: 0 0 calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols));
+}
+
+.grille img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.vignette {
+    overflow: hidden;
+    cursor: pointer;
+    /* aspect-ratio: 10/7; */
+}
+
+.caption {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.illustrations {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: var(--gap);
+    /* border : 1px  solid red; */
+}
+
+.illustrations>div {
+    flex: 1 0 calc((100% - (var(--illus) - 1) * var(--gap)) / var(--illus));
+    overflow: hidden;
+    cursor: pointer;
+    /* border : 1px solid green; */
+}
+
+.illustrations img {
+    max-width: 100%;
+    height: auto;
+}
+
+.illustrations img:hover,
+.grille img:hover {
+    transform: scale(1.03);
+    transition: 0.3s ease;
+}
+
+#titre {
+    display: none;
+}
+
+/* ------------------------------------------------- */
+
+@media screen and (max-width: 1300px) {
+    :root {
+        --illus: 2;
+    }
+}
+@media screen and (max-width: 1100px) {
+
+    :root {
+        --cols: 1;
+    }
+}
+@media screen and (max-width: 900px) {
+    :root {
+        --illus: 1;
+    }
+
+    #titre {
+        display: block;
+    }
+
+    #imageHD {
+        max-width: 100%;
+    }
+
+    .grille span {
+        display: none;
+    }
+
+}

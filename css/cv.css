@@ -1,0 +1,119 @@
+#moi {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+#lstLogos {
+    height: 30px;
+    margin-top: 1vh;
+    margin-bottom: 7vh;
+    justify-content: space-around;
+    /* border:1px solid red; */
+}
+
+#lstLogos img {
+    max-height: 100%;
+    margin: 0 3px;
+}
+
+.tablo {
+    display: flex;
+    width: 90%;
+    gap: 60px;
+    text-align: left;
+    /* border:1px solid red; */
+}
+
+.colgauche {
+    width: 40%;
+}
+.colgauche div.section {
+    margin-bottom: 3vh;
+    /* border:1px solid rgb(255, 255, 255); */
+}
+
+.coldroite {
+    width: 60%;
+}
+
+i {
+    margin-right: 5px;
+}
+
+main i:hover {
+    color: var(--fushia);
+}
+
+.titreSection {
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--fushia) !important;
+    padding-bottom: 2vh;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+}
+
+.section div {
+    display: flex;
+}
+
+.section>div {
+    flex-direction: column;
+    margin-bottom: 4vh;
+    border-bottom: 1px dotted var(--fushia);
+}
+
+.section div>div {
+    justify-content: space-between;
+    /* border:1px solid fuchsia; */
+    line-height: 1.5;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    margin: 0;
+}
+
+#divers>div,
+#loisirs>div {
+    border: none;
+}
+
+@media screen and (max-width: 900px) {
+    .tablo {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        width: 100%;
+        gap: 0;
+    }
+
+    .colgauche,
+    .coldroite {
+        width: 100%;
+    }
+
+    .section{
+        /* border: 1px solid red; */
+        margin-bottom: 3vh;
+    }
+
+    .titreSection {
+        text-align: center;
+    }
+
+    .section div {
+        flex-direction: column;
+    }
+
+    .section > div :first-child {
+        flex-direction: column-reverse;
+    }
+
+}

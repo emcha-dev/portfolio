@@ -1,0 +1,87 @@
+/* VISIONNEUSE */
+.calqueNoir {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* CONTENU VISIONNEUSE */
+.contenuVisionneuse {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+#imageHD {
+    position: relative;
+    margin: auto;
+    max-height: 95vh;
+    display: block;
+}
+
+/* BOUTON FERMER */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 20px;
+    z-index: 2;
+    color: white;
+    /* border:1px solid blue; */
+}
+
+.close:hover,
+.close:focus {
+    color: var(--fushia);
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* FLECHES PRECEVENT/SUIVANT */
+.fleches {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    /* border:1px solid rgb(60, 185, 60); */
+}
+
+.fleches a {
+    display: block;
+}
+
+.avant,
+.apres {
+    cursor: pointer;
+    text-decoration: none;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.apres {
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.avant:hover,
+.apres:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+/* reset base */
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+* :not(a):not(img) {
+    cursor: default;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* barre de défilement vertical toujours affichée */
+html {
+    overflow-y: scroll;
+}
+
+/* variables globales (typo, couleurs) */
+:root {
+    --bs-body-font-family: 'Hanken Grotesk', sans-serif;
+    --fushia: #ff3682;
+    --violet: #8d2f5b;
+    --gris: #dddddd;
+    --texte: #381324;
+}
+
+/* classes globales d'apparence */
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 300;
+}
+
+h3 {
+    margin-bottom: 4vh;
+}
+
+h5 {
+    font-weight: 400;
+}
+
+.light {
+    font-weight: 200;
+}
+
+.fat {
+    font-weight: 500;
+}
+
+.margeinferieure {
+    margin-bottom: 5vh;
+}
+
+.fushia,
+i,
+.pageactuelle {
+    color: var(--fushia);
+}
+
+.accueil:hover,
+i:hover {
+    color: var(--violet);
+    transition: 0.3s ease;
+}
+
+/* BODY */
+body {
+    padding: 0% 15%;
+    color: var(--texte) !important;
+    font-weight: 300 !important;
+    background-color: var(--gris) !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+.image2fond {
+    /*div qui prend tout l'espace de l'élément parent*/
+    position: fixed;
+    inset: 0;
+    /*réglages opacité et position z*/
+    background-image: url("../img/cartoons.png");
+    background-size : cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    opacity:0.15;
+    z-index:-1;
+}
+
+body a {
+    color: var(--texte);
+    text-decoration: none;
+}
+
+body a:hover {
+    color: var(--fushia);
+    transition: 0.3s ease;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 15%;
+    right: 15%;
+    height: 10vh;
+    background-color: var(--gris);
+    border-bottom: 1px solid var(--fushia);
+}
+
+header h4 {
+    font-weight: 400;
+}
+
+#burgermenu {
+    display: none;
+}
+
+.navbar div {
+    position: relative;
+    margin: 0px 0px 0px 20px;
+}
+
+/* soulignement des liens de navigation */
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    background: var(--fushia);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.navbar a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.navbar a.pageactuelle::after {
+    transform: scaleX(1);
+}
+
+/* MAIN */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15vh;
+    padding-bottom: 10vh;
+    text-align: center;
+    width: 100%;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    width: 100%;
+    border-top: 1px solid var(--fushia);
+}
+
+footer i,
+#separateur,
+#mail {
+    padding: 0 10px;
+}
+
+#liens {
+    display: flex;
+    align-items: center;
+}
+
+/* MENU SMARTPHONE */
+#menusmartphone {
+    position: fixed;
+    z-index: 2;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#menusmartphone a {
+    font-size: larger;
+    color: var(--fushia);
+    animation: fadeIn 0.3s ease forwards;
+}
+
+#menusmartphone i {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 1.2em;
+}
+
+/* DESIGN RESPONSIF */
+@media screen and (max-width: 1500px) {
+    body {
+        padding: 0 10%;
+    }
+
+    header {
+        left: 10%;
+        right: 10%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    main {
+        padding: 5vh 0;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    header {
+        position: sticky;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        justify-content: center;
+        left: 0%;
+        right: 0%;
+    }
+
+    header div:first-child {
+        margin-top: 4vh;
+        margin-bottom: 1vh;
+    }
+
+    #burgermenu {
+        display: block;
+        font-size: 30px;
+        margin-bottom: 1vh;
+    }
+
+    #separateur {
+        display: none;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer div {
+        padding: 0 5px;
+    }
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

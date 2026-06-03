@@ -1,0 +1,33 @@
+:root{
+    --cols : 2;
+    --gap : 20px;
+}
+.grille {
+    display:flex;
+    flex-wrap: wrap;
+    width:100% !important;
+    justify-content: center;
+    gap: var(--gap);
+}
+.grille > div{
+    flex: 0 0 calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols));
+    aspect-ratio: 16 / 7;
+}
+.grille iframe {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border: 0;
+}
+#titre{
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    :root {
+        --cols: 1;
+    }
+    #titre {
+        display: block;
+    }
+
+}

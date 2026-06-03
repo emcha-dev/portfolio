@@ -1,0 +1,193 @@
+:root {
+    --deuxcols: 2;
+    --troiscols: 3;
+    --gap: 40px;
+}
+
+#banniere {
+    margin: auto;
+    width: 90%;
+    height: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1vh;
+    /* border: 1px solid red; */
+}
+
+#banniere img {
+    width: 100%;
+}
+
+#banniere:hover {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2), 4px 4px 6px rgba(0, 0, 0, 0.19);
+    transition: 0.3s ease;
+}
+
+.grille1,
+.grille2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: var(--gap);
+    /* border : 1px  solid red; */
+}
+
+.grille1>div {
+    flex: 1 0 calc((100% - (var(--troiscols) - 1) * var(--gap)) / var(--troiscols));
+    overflow: hidden;
+    cursor: pointer;
+    aspect-ratio: 7/10;
+    /* border : 1px solid green; */
+}
+
+.grille2 {
+    margin-top: var(--gap);
+}
+
+.grille2>div {
+    flex: 1 0 calc((100% - (var(--deuxcols) - 1) * var(--gap)) / var(--deuxcols));
+    overflow: hidden;
+    cursor: pointer;
+    aspect-ratio: 10/7;
+    /* border : 1px solid green; */
+}
+
+.grille1 img {
+    max-height: 100%;
+    object-fit: cover;
+}
+.grille2 img{
+    max-width: 100%;    
+    object-fit: cover;
+}
+
+.grille1 img:hover,
+.grille2 img:hover {
+    transform: scale(1.03);
+    transition: 0.3s ease;
+}
+
+/* ------------------------------------------------- */
+
+/* VISIONNEUSE */
+.calqueNoir {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* CONTENU VISIONNEUSE */
+.contenuVisionneuse {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+#imageHD {
+    position: relative;
+    margin: auto;
+    max-height: 95vh;
+    display: block;
+}
+
+/* BOUTON FERMER */
+.close {
+    color: white;
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    font-size: 35px;
+    font-weight: bold;
+    z-index: 2;
+    /* border:1px solid blue; */
+}
+
+.close:hover,
+.close:focus {
+    color: var(--fushia);
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* FLECHES PRECEVENT/SUIVANT */
+.fleches {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    /* border:1px solid rgb(60, 185, 60); */
+}
+
+.fleches a {
+    display: block;
+}
+
+.avant,
+.apres {
+    cursor: pointer;
+    text-decoration: none;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.apres {
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.avant:hover,
+.apres:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* ------------------------------------------------- */
+
+#titre {
+    display: none;
+}
+
+@media screen and (max-width: 1500px) {
+
+    :root {
+        --troiscols: 2;
+        --deuxcols: 1;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    :root {
+        --troiscols: 1;
+    }
+
+    #titre {
+        display: block;
+    }
+
+    #banniere {
+        width: 100%;
+    }
+
+    #imageHD {
+        max-width: 100%;
+    }
+}
