@@ -129,6 +129,7 @@ header {
 
 header h4 {
     font-weight: 400;
+    letter-spacing: 0.2em;
 }
 
 #burgermenu {
@@ -189,6 +190,10 @@ footer i,
 #separateur,
 #mail {
     padding: 0 10px;
+}
+
+footer i {
+    cursor: pointer;
 }
 
 #liens {
