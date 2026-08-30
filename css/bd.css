@@ -4,24 +4,28 @@
     --gap: 40px;
 }
 
-#banniere {
+#banniere p{
+ margin-bottom: 1vh;
+}
+
+#logojo{
+    height: 200px;
     margin: auto;
-    width: 90%;
-    height: auto;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-bottom: 1vh;
+    margin-bottom: 2vh;
     /* border: 1px solid red; */
 }
 
-#banniere img {
-    width: 100%;
-}
 
-#banniere:hover {
+/* #banniere:hover {
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2), 4px 4px 6px rgba(0, 0, 0, 0.19);
     transition: 0.3s ease;
+} */
+
+#liensjo img {
+    height:40px;
+    margin : 0 8px;
 }
+
 
 .grille1,
 .grille2 {
