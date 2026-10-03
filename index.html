@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./css/accueil.css">
     <!-- JAVASCRIPT -->
     <script src="./js/clicdroit.js" defer></script>
-    <script src="./js/navbar.js" defer></script>
+    <script src="./js/navbarindex.js" defer></script>
 </head>
 
 <body id="loading">
@@ -27,7 +27,16 @@
         <div id="burgermenu">
             <i onclick="ouvrirmenusmartphone()" class="bi bi-list"></i>
         </div>
-        <div class="navbar"></div>
+        <div class="navbar">
+            <div><a href="./pages/storyboard.html" id="sb">Storyboard</a></div>
+            <div><a href="./pages/animation.html" id="anim">Animation</a></div>
+            <div><a href="./pages/bd.html" id="bd">Bande dessinée</a></div>
+            <div><a href="./pages/travauxperso.html" id="tp">Travaux personnels</a></div>
+            <div><a href="./pages/cv.html" id="cv">CV</a></div>
+            <div>
+                <a href="mailto:marion.charve@yahoo.com">@</a>
+            </div>
+        </div>
     </header>
     <!-- MAIN -->
     <main>
@@ -101,6 +110,22 @@
     </main>
     <!-- MENU SMARTPHONE -->
     <div id="menusmartphone">
+        <i onclick="fermermenusmartphone()" class="bi bi-x-lg"></i>
+        <div>
+            <a href="./pages/storyboard.html">Storyboard</a>
+        </div>
+        <div>
+            <a href="./pages/animation.html">Animation</a>
+        </div>
+        <div>
+            <a href="./pages/bd.html">Bande dessinée</a>
+        </div>
+        <div>
+            <a href="./pages/travauxperso.html">Travaux personnels</a>
+        </div>
+        <div>
+            <a href="./pages/cv.html">CV</a>
+        </div>
     </div>
     <!-- FOOTER -->
     <footer>
