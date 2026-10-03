@@ -17,7 +17,7 @@
     <script src="./js/navigationsmartphone.js" defer></script>
 </head>
 
-<body>
+<body id="loading">
     <div class="image2fond"></div>
     <header>
         <div>
@@ -144,6 +144,11 @@
             <a target="_blank" href="https://vimeo.com/user107763820"><i class="bi bi-vimeo"></i></a>
         </div>
     </footer>
+    <script>
+        window.addEventListener('load', () => {
+            document.body.classList.remove('loading');
+        });
+    </script>    
 </body>
 
 </html>
