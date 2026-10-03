@@ -67,3 +67,10 @@ switch (page) {
                 document.getElementById("cv").classList.add("pageactuelle");
                 break;
 }
+
+function ouvrirmenusmartphone(){
+        document.getElementById("menusmartphone").style.display = "flex";
+}
+function fermermenusmartphone(){
+        document.getElementById("menusmartphone").style.display = "none";
+}
