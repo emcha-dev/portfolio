@@ -8,7 +8,13 @@
     border: none;
     box-sizing: border-box;
 }
+body.loading {
+    visibility: hidden;
+}
 
+body {
+    visibility: visible;
+}
 * :not(a):not(img) {
     cursor: default;
 }
