@@ -14,37 +14,22 @@
     <link rel="stylesheet" href="./css/accueil.css">
     <!-- JAVASCRIPT -->
     <script src="./js/clicdroit.js" defer></script>
-    <script src="./js/navigationsmartphone.js" defer></script>
+    <script src="../js/navbar.js" defer></script>
 </head>
 
 <body id="loading">
     <div class="image2fond"></div>
+    <!-- HEADER -->
     <header>
         <div>
             <h4 class="fushia">MARION CHARVE</h4>
         </div>
-        <div id="burgermenu"><i onclick="ouvrirmenusmartphone()" class="bi bi-list"></i></div>
-        <div class="navbar">
-            <div>
-                <a href="./pages/storyboard.html">Storyboard</a>
-            </div>
-            <div>
-                <a href="./pages/animation.html">Animation</a>
-            </div>
-            <div>
-                <a href="./pages/bd.html">Bande dessinée</a>
-            </div>
-            <div>
-                <a href="./pages/travauxperso.html">Travaux personnels</a>
-            </div>
-            <div>
-                <a href="./pages/cv.html">CV</a>
-            </div>
-            <div>
-                <a href="mailto:marion.charve@yahoo.com">@</a>
-            </div>
+        <div id="burgermenu">
+            <i onclick="ouvrirmenusmartphone()" class="bi bi-list"></i>
         </div>
+        <div class="navbar"></div>
     </header>
+    <!-- MAIN -->
     <main>
         <!-- <h1>h1</h1><h2>h2</h2><h3>h3</h3><h4>h4</h4><p>p</p> -->
         <img id="moi" src="https://klaimsden.net/jackpot/portfolio/img/moi.jpg">
@@ -116,39 +101,15 @@
     </main>
     <!-- MENU SMARTPHONE -->
     <div id="menusmartphone">
-        <i onclick="fermermenusmartphone()" class="bi bi-x-lg"></i>
-        <div>
-            <a href="./pages/storyboard.html">Storyboard</a>
-        </div>
-        <div>
-            <a href="./pages/animation.html">Animation</a>
-        </div>
-        <div>
-            <a href="./pages/bd.html">Bande dessinée</a>
-        </div>
-        <div>
-            <a href="./pages/travauxperso.html">Travaux personnels</a>
-        </div>
-        <div>
-            <a href="./pages/cv.html">CV</a>
-        </div>
     </div>
+    <!-- FOOTER -->
     <footer>
-        <div id="mail">
-            <a class="fushia accueil" href="mailto:marion.charve@yahoo.com">marion.charve[at]yahoo.com</a>
-        </div>
-        <div id="separateur">|</div>
-        <div id="liens">
-            <a target="_blank" href="https://www.linkedin.com/in/marion-charve/"><i class="bi bi-linkedin"></i></a>
-            <a target="_blank" href="https://www.instagram.com/jackpot_comics/"><i class="bi bi-instagram"></i></a>
-            <a target="_blank" href="https://vimeo.com/user107763820"><i class="bi bi-vimeo"></i></a>
-        </div>
     </footer>
     <script>
         window.addEventListener('load', () => {
             document.body.classList.remove('loading');
         });
-    </script>    
+    </script>
 </body>
 
 </html>
